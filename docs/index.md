@@ -1,30 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to our QIoT Project
 
-You can use the [editor on GitHub](https://github.com/QIoT-fr-FR-utf8/qiot-acb.github.io/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+The QIoT project is designed for EMEA App Dev partners interested in new RedHatCloud-NativeTechnologies and Edge Architecture design and implementation..
+This project have for purpose to build an application with different technologies like Quarkus, python, containers, to measure and provide data of the air quality.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Technicals choices
 
-### Markdown
+## Teams 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+ACB
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
