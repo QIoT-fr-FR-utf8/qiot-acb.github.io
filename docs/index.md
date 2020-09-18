@@ -1,9 +1,16 @@
 ## Welcome to our QIoT Project
 
-The QIoT project is designed for EMEA App Dev partners interested in new RedHatCloud-NativeTechnologies and Edge Architecture design and implementation..
+The QIoT project is designed for EMEA App Dev partners interested in new RedHatCloud-NativeTechnologies and Edge Architecture design and implementation..  
 This project have for purpose to build an application with different technologies like Quarkus, python, containers, to measure and provide data of the air quality.
 
-## Technicals choices
+## Technicals choices  
+
+### Quarkus  
+
+### Prometheus  
+
+### Python  
+
 
 ## Teams 
 
