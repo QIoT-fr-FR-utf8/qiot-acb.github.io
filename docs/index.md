@@ -15,11 +15,11 @@ This project have for purpose to build an application with different technologie
 
 We are the "Axians Cloud Builder" France team, with:
 
-* David Auffray <david.auffray@axians.com>
-* Sébastien Davoult <sebastien.davout@axians.com>
-* Jérémy Hoarau <jeremy.hoarau@axians.com>
-* Chamseddine Saadoune <chamseddine.saadoune@axians.com>
-* Rémi Verchère <remi.verchere@axians.com>
+* David Auffray
+* Sébastien Davoult
+* Jérémy Hoarau
+* Chamseddine Saadoune
+* Rémi Verchère
 
 ### Jekyll Themes
 
