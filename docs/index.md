@@ -11,12 +11,15 @@ This project have for purpose to build an application with different technologie
 
 ### Python  
 
+## Team
 
-## Teams 
+We are the "Axians Cloud Builder" France team, with:
 
-ACB
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+* David Auffray <david.auffray@axians.com>
+* Sébastien Davoult <sebastien.davout@axians.com>
+* Jérémy Hoarau <jeremy.hoarau@axians.com>
+* Chamseddine Saadoune <chamseddine.saadoune@axians.com>
+* Rémi Verchère <remi.verchere@axians.com>
 
 ### Jekyll Themes
 
