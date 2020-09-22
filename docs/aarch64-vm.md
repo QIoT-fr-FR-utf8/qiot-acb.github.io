@@ -24,6 +24,7 @@ Using "Virtual Machine Manager", create a new machine with the following setting
 ## Install GraalVM
 
 * Update and install dependencies
+
 ```
 # dnf update
 # dnf -y install gcc glibc-devel zlib-devel libstdc++-static
@@ -33,7 +34,9 @@ Using "Virtual Machine Manager", create a new machine with the following setting
 # mkdir /usr/lib/graalvm
 # mv graalvm-ce-java11-20.2.0 /usr/lib/graalvm
 ```
+
 * Update PATH, editing `/etc/profile`:
+
 ```
 [...]
 GRAALVM_HOME=/usr/lib/graalvm/graalvm-ce-java11-20.2.0
@@ -45,6 +48,7 @@ export PATH
 ```
 
 ## Build Application
+
 ```
 # git clone https://github.com/QIoT-fr-FR-utf8/qiot-edge-service.git
 # cd qiot-edge-service/
@@ -53,6 +57,7 @@ export PATH
 ```
 
 ## Generate container
+
 ```
 # podman login quay.io
 # podman build -f src/main/docker/Dockerfile.native -t quay.io/acb-fr/qiot-edge-service:1-aarch64 .
