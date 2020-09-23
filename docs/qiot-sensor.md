@@ -4,6 +4,21 @@
 
 ## Issues, Ideas
 
+### LCD
+
+The Enviro+ board includes a LCD screen. We could use it to display usefull local information, inspired from [pimoroni examples](https://github.com/pimoroni/enviroplus-python/blob/master/examples/weather-and-light.py).
+
+Instead, we prefer displaying useless information, and provides API endpoint, so if you want to post some text, on the board, you can:
+```bash
+curl -X POST -H 'Content-Type: application/json' -i 'http://127.0.0.1:8000/api/lcd' --data '{
+"message": "Axians loves QIoT"
+}'
+```
+
+Below the startup message:
+
+![LCD message](img/enviro.jpg)
+
 ## Annexes
 
 ### Build process
