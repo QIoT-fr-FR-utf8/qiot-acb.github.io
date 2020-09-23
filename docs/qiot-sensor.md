@@ -219,13 +219,8 @@ if __name__=='__main__':
             debug=os.getenv('FLASK_APP_DEBUG'))
 
 ```
-
-
 For all of this we use ***Flask***, we don't use [``` python3 app.py ```] to run the app.
 we use gunicorn to run it in production mode.
-
-
-
 
 
 ### Container image
@@ -245,7 +240,7 @@ The container is started with the following parameters:
 
 ### Container Alpine
 
-The current container is 970 MB, which is HUGE for a simple flask application. This is due mainly to:
+The current container is 970 MB, which is **HUGE** for a simple flask application. This is due mainly to:
 * Fedora base image
 * Python libraries and dependencies
 * Unoptimised docker image build
