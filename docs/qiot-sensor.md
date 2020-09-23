@@ -1,5 +1,7 @@
 # QIoT Sensor
 
+{:toc}
+
 ## Implementation
 
 ## The coding side (not the dark side ;) )
