@@ -3,13 +3,21 @@
 The QIoT project is designed for EMEA App Dev partners interested in new RedHatCloud-NativeTechnologies and Edge Architecture design and implementation..  
 This project have for purpose to build an application with different technologies like Quarkus, python, containers, to measure and provide data of the air quality.
 
-## Technicals choices  
+Hereafter some technical details about our work, choices, issues, solutions and other things we faced.
 
-### Quarkus  
+## Technicals choices
 
-### Prometheus  
+### Quarkus
 
-### Python  
+See [Quarkus](quarkus.md)
+
+### Prometheus
+
+See [Prometheus](prometheus.md)
+
+### Python
+
+See [qiot-sensor](qiot-sensor.md)
 
 ## Team
 
@@ -20,6 +28,8 @@ We are the "Axians Cloud Builder" France team, with:
 * Jérémy Hoarau
 * Chamseddine Saadoune
 * Rémi Verchère
+
+See [team organization](organization.md) to see how we worked on the project.
 
 ### Jekyll Themes
 
