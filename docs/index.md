@@ -26,11 +26,11 @@ Hereafter some technical details about our work, choices, issues, solutions and 
 
 #### Python Application
 
-See [qiot-sensor](qiot-sensor.md)
+See [QIoT Sensor](qiot-sensor.md)
 
 #### Metrics
 
-See [Prometheus](prometheus.md)
+See [Device Metrics](prometheus.md)
 
 
 ### Edge Service

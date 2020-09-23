@@ -1,5 +1,11 @@
 # QIoT Sensor
 
+## Implementation
+
+## Issues, Ideas
+
+## Annexes
+
 ### Build process
 
 1. Checkout code
