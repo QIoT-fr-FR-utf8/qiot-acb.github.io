@@ -22,6 +22,10 @@ See [team organization](organization.md) to see how we worked on the project.
 
 Hereafter some technical details about our work, choices, issues, solutions and other things we faced.
 
+### Operating System
+
+See [Fedora IoT](fedora-iot.md), and [aarch64 Virtual Machine](aarch64.md)
+
 ### Sensors Service
 
 #### Python Application
@@ -31,7 +35,6 @@ See [QIoT Sensor](qiot-sensor.md)
 #### Metrics
 
 See [Device Metrics](prometheus.md)
-
 
 ### Edge Service
 
