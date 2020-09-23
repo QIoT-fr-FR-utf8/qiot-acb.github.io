@@ -5,7 +5,7 @@
 
 ## Implementation
 
-### The coding side (not the dark side ;) )
+## The coding side ![codeside](images/jedi-master.png) (not the dark side ;) ![dark-side](images/darkside.png) )
 
 ```mermaid
 graph LR;
@@ -21,7 +21,7 @@ The python application is composed of two main part :
    + The API exposer : Flask application with swagger explaination
 
 
-#### Retrievers
+### Retrievers
 
 There are three retrievers :
    - gas_extend.py
@@ -29,7 +29,6 @@ There are three retrievers :
    - particules_extend.py
 
 Example with gas_extend.py :
-
 ```python
 # gas_extend.py
 from time import gmtime, strftime
@@ -89,9 +88,145 @@ def json_parsing_return():
 
 Each of this have checking functions which enable to validate the type of values, and one which return the formatted values in json.
 
-#### API Exposer
+### API Exposer
 
-the main
+the main app : app.py
+
+This application is composed of multiple route with specific actions, I describe it for you ;-) :
+
++  /
+   +  Method : GET
+   + the main route, it show a Welcome Message, and it can be use it to check the avaiability of the service
+   + ``` { "result":{"Hello QIoT"}} ```
+
++  /api/sensors
+   +  Method : GET
+   +  this path display the differents route, it is a basic / static functions
+   +  ``` {"result":{}} ```
+
+
++  /api/sensors/{gas,weather,pollution}
+   +  Method : GET
+   +  return the value of the sensor
+
+
++  /api/lcd
+   +  Method : POST
+   +  Display message into LCD screen
+
+
++  /api/docs
+   +  Method : GET
+   +  Return a docs about the API (Swagger)
+
+Also we managed the **404 error page**
+
+```python
+#!/usr/bin/env python3
+
+# Import basic libs
+import time
+import os
+import atexit
+
+# Import flask for webservice and prometheus for metrics
+from flask import Flask,jsonify, Response,request, render_template
+from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
+
+# Import applications libs
+from metrics import REQUEST_TIME
+import gas_extend
+import particules_extend
+import weather_extend
+import lcd
+
+atexit.register(lcd.stop)
+
+# Create Flask application
+app = Flask(__name__)
+
+@app.route('/metrics')
+def metrics():
+    """Flask endpoint to gather the metrics, will be called by Prometheus."""
+    return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
+
+@app.route('/', methods=['GET'])
+def index():
+    result={}
+    result['result']="Hello QIoT"
+    return jsonify(result)
+
+
+@app.route('/api/sensors', methods=['GET'])
+def listsensor():
+    if request.method == 'GET':
+        listofSensor=[]
+        listofSensor.append('/api/sensors/gas')
+        listofSensor.append('/api/sensors/pollution')
+        listofSensor.append('/api/sensors/weather')
+        listofSensor.append('/api/lcd')
+        result={}
+        result={"result":listofSensor}
+
+        return jsonify(result)
+
+
+@app.route('/api/sensors/gas', methods=['GET'])
+def get_data_gas():
+    if request.method == 'GET':
+        result={}
+        result={"result":gas_extend.json_parsing_return()}
+        return jsonify(result)
+
+@app.route('/api/sensors/pollution', methods=['GET'])
+def get_data_particules():
+    if request.method == 'GET':
+        result={}
+        result={"result":particules_extend.json_parsing_return()}
+        return jsonify(result)
+
+@app.route('/api/lcd', methods=['POST'])
+def post_message_to_lcd():
+    if request.method == 'POST':
+        data=request.get_json()
+        result={"result":{"message posted":lcd.draw_message(data['message'])}}
+        return jsonify(result)
+    
+
+@app.route('/api/sensors/weather', methods=['GET'])
+@REQUEST_TIME.time()
+def get_weather():
+    if request.method == 'GET':
+        result={}
+        result={"result":weather_extend.json_parsing_return()}
+        return jsonify(result)
+
+
+@app.route('/api/docs')
+def get_docs():
+    print('sending docs')
+    return render_template('swaggerui.html')
+
+@app.errorhandler(404)
+def ressource_not_found(e):
+    error="{0}".format(e)
+    return jsonify({"result":error}), 404
+
+
+if __name__=='__main__':
+    lcd.draw_message()
+    app.run(host=os.getenv('FLASK_APP_HOST'),port=os.getenv('FLASK_APP_PORT'),
+            debug=os.getenv('FLASK_APP_DEBUG'))
+
+```
+
+
+For all of this we use ***Flask***, we don't use [``` python3 app.py ```] to run the app.
+we use gunicorn to run it in production mode.
+
+
+
+
 
 ### Container image
 
