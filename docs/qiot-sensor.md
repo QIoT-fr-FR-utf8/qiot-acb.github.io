@@ -1,5 +1,49 @@
 # QIoT Sensor
 
+## Implementation
+
+
+### Container image
+
+To be compliant with the specifications, the container image is built based on the Fedora 31, with the following:
+* Fedora base image, including all packages and python libraries to interract with the Raspberry Pi
+* Fedora flask image, including python libraries and environment variables to launch flask application
+
+The container is started with the following parameters:
+* `-d` as daemon
+* `--network=qiot` to be run in a specific dedicated network
+* `-- privileged` to access to external devices such as GPIOs
+* `-p 8000:8000` to expose external port 8000 (see [prometheus](prometheus.md), not used for production)
+* `--name qiot-sensor` to define a tiny name
+
+## Issues, Ideas
+
+### Container Alpine
+
+The current container is 970 MB, which is HUGE for a simple flask application. This is due mainly to:
+* Fedora base image
+* Python libraries and dependencies
+* Unoptimised docker image build
+
+We tried to build an alpine linux container, but the `numpy` python package is still compiling on aarch64 device...
+
+### LCD
+
+The Enviro+ board includes a LCD screen. We could use it to display usefull local information, inspired from [pimoroni examples](https://github.com/pimoroni/enviroplus-python/blob/master/examples/weather-and-light.py).
+
+Instead, we prefer displaying useless information, and provides API endpoint, so if you want to post some text, on the board, you can:
+```bash
+curl -X POST -H 'Content-Type: application/json' -i 'http://127.0.0.1:8000/api/lcd' --data '{
+"message": "Axians loves QIoT"
+}'
+```
+
+Below the startup message:
+
+![LCD message](img/enviro.jpg)
+
+## Annexes
+
 ### Build process
 
 1. Checkout code

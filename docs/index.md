@@ -1,23 +1,10 @@
-## Welcome to our QIoT Project
+# Quarkus for IoT Hackfest
 
-The QIoT project is designed for EMEA App Dev partners interested in new RedHatCloud-NativeTechnologies and Edge Architecture design and implementation..  
-This project have for purpose to build an application with different technologies like Quarkus, python, containers, to measure and provide data of the air quality.
+## Introduction
 
-Hereafter some technical details about our work, choices, issues, solutions and other things we faced.
+The QIoT project is designed for EMEA App Dev partners interested in new Red Hat Cloud-Native Technologies and Edge Architecture design and implementation
 
-## Technicals choices
-
-### Quarkus
-
-See [Quarkus](quarkus.md)
-
-### Prometheus
-
-See [Prometheus](prometheus.md)
-
-### Python
-
-See [qiot-sensor](qiot-sensor.md)
+EMEA App Dev Partners join the project participating in a Hackfest, a challenge for Partners to implement a real-world use-case scenario.
 
 ## Team
 
@@ -31,10 +18,25 @@ We are the "Axians Cloud Builder" France team, with:
 
 See [team organization](organization.md) to see how we worked on the project.
 
-### Jekyll Themes
+## Technical choices
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/QIoT-fr-FR-utf8/qiot-acb.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Hereafter some technical details about our work, choices, issues, solutions and other things we faced.
 
-### Support or Contact
+### Operating System
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+See [Fedora IoT](fedora-iot.md), and [aarch64 Virtual Machine](aarch64.md)
+
+### Sensors Service
+
+#### Python Application
+
+See [QIoT Sensor](qiot-sensor.md)
+
+#### Metrics
+
+See [Device Metrics](prometheus.md)
+
+### Edge Service
+
+See [Edge Service](edge-service.md)
+
