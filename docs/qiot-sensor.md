@@ -7,7 +7,7 @@
 
 ### The coding side (not the dark side ;) )
 
-```mermaid!
+```mermaid
 graph LR;
 app.py --retrieve--> gas_extends
 app.py --retrieve--> particules_extends
