@@ -175,6 +175,7 @@ $ sudo systemctl start podman-qiot-sensor.service
 ```
 
 1. Check it runs!
+
 ```
 $ sudo systemctl status podman-qiot-sensor.service
 ● podman-qiot-sensor.service - Podman container-qiot-sensor.service
