@@ -5,7 +5,7 @@
 
 ## Implementation
 
-## The coding side (not the dark side ;) )
+### The coding side (not the dark side ;) )
 
 ```mermaid
 graph LR;
@@ -21,7 +21,7 @@ The python application is composed of two main part :
    + The API exposer : Flask application with swagger explaination
 
 
-### Retrievers
+#### Retrievers
 
 There are three retrievers :
    - gas_extend.py
@@ -89,7 +89,7 @@ def json_parsing_return():
 
 Each of this have checking functions which enable to validate the type of values, and one which return the formatted values in json.
 
-### API Exposer
+#### API Exposer
 
 the main
 
