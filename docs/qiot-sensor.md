@@ -66,3 +66,89 @@ Sep 22 19:24:41 qiot.verchere.lab podman[97782]: 2020-09-22 19:24:41.336614494 +
 Sep 22 19:24:41 qiot.verchere.lab podman[97782]: qiot-sensor
 Sep 22 19:24:41 qiot.verchere.lab systemd[1]: Started Podman container-qiot-sensor.service.
 ```
+## The coding side (not the dark side ;) )
+
+```mermaid
+graph LR;
+app.py --retrieve--> gas_extends
+app.py --retrieve--> particules_extends
+app.py --retrieve--> weather_extends
+Quarkus --expose--> app.py
+Prometheus* --expose--> app.py
+```
+
+The python application is composed of two main part :  
+   + The retrievers : Metrics extended class  
+   + The API exposer : Flask application with swagger explaination
+
+
+### Retrievers
+
+There are three retrievers :
+   - gas_extend.py
+   - weather_extend.py
+   - particules_extend.py
+
+Example with gas_extend.py :
+```pyhton
+# gas_extend.py
+from time import gmtime, strftime
+from enviroplus import gas
+
+#prom side
+from prometheus_client import Gauge
+from metrics import PROM_GAS_METRICS
+
+def r_float_value_adc():
+    if isinstance(gas.readall().adc, float):
+        return gas.read_all().adc
+    else:
+        return 0
+
+
+def r_float_value_nh3():
+    if isinstance(gas.readall().nh3, float):
+        PROM_GAS_METRICS['gauge']['nh3'].set(gas.read_all().nh3)
+        return gas.read_all().nh3
+    else:
+        return 0
+
+
+def r_float_value_oxidising():
+    if isinstance(gas.readall().oxidising, float):
+        PROM_GAS_METRICS['gauge']['oxidising'].set(gas.read_all().oxidising)
+        return gas.read_all().oxidising
+    else:
+        return 0
+
+
+def r_float_value_reducing():
+    if isinstance(gas.readall().reducing, float):
+        PROM_GAS_METRICS['gauge']['reducing'].set(gas.read_all().reducing)
+        return gas.read_all().reducing
+    else:
+        return 0
+
+
+def json_parsing_return():
+
+    d_jsonexport={}
+    d_jsonexport['instant']=strftime("%Y-%m-%d %H:%M:%S%Z", gmtime())
+    d_jsonexport['nh3']=gas.read_all().nh3
+    d_jsonexport['oxidising']=gas.read_all().oxidising
+    d_jsonexport['reducing']=gas.read_all().reducing
+    
+    PROM_GAS_METRICS['gauge']['nh3'].set(d_jsonexport['nh3'])
+    PROM_GAS_METRICS['gauge']['oxidising'].set(d_jsonexport['oxidising'])
+    PROM_GAS_METRICS['gauge']['reducing'].set(d_jsonexport['reducing'])
+
+    return d_jsonexport
+
+```
+
+
+Each of this have checking functions which enable to validate the type of values, and one which return the formatted values in json.
+
+### API Exposer
+
+the main
