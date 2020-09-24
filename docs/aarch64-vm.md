@@ -1,5 +1,8 @@
 # Using aarch64 VM
 
+* TOC
+{:toc}
+
 ## Implementation
 
 Using it to build Quarkus application in native mode, and also automate the docker build image process.

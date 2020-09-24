@@ -1,5 +1,8 @@
 # Device metrics
 
+* TOC
+{:toc}
+
 ## Implementation
 
 As we (Axians Cloud Builder), are comfortable building and installing observability solutions, and as we are not experienced developpers, we decided to quickly add prometheus metrics on the device sensor.
@@ -63,7 +66,6 @@ bme280_humidity_percent 27.822407929844857
 There is no issue to implement that. The drawback here is you need to expose your application, in order to be reachable from the outside world.
 
 So, the future idea would be to expose the metrics internaly, and then create a dedicated prometheus server or shipper on the edge device (or anything like sidecar container that would scrape these metrics).
-
 
 ## Annexes
 

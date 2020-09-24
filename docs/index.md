@@ -1,5 +1,8 @@
 # Quarkus for IoT Hackfest
 
+* TOC
+{:toc}
+
 ## Introduction
 
 The QIoT project is designed for EMEA App Dev partners interested in new Red Hat Cloud-Native Technologies and Edge Architecture design and implementation

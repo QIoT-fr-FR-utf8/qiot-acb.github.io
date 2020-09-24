@@ -5,7 +5,7 @@
 
 ## Implementation
 
-## The coding side ![codeside](images/jedi-master.png) (not the dark side ;) ![dark-side](images/darkside.png) )
+### The coding side ![codeside](img/jedi-master.png) *(not the dark side ;) ![dark-side](img/darkside.png) )*
 
 ```mermaid
 graph LR;
@@ -21,14 +21,15 @@ The python application is composed of two main part :
    + The API exposer : Flask application with swagger explaination
 
 
-### Retrievers
+#### Retrievers
 
 There are three retrievers :
    - gas_extend.py
    - weather_extend.py
    - particules_extend.py
 
-Example with gas_extend.py :
+Example with gas_extend.py:
+
 ```python
 # gas_extend.py
 from time import gmtime, strftime
@@ -82,13 +83,11 @@ def json_parsing_return():
     PROM_GAS_METRICS['gauge']['reducing'].set(d_jsonexport['reducing'])
 
     return d_jsonexport
-
 ```
-
 
 Each of this have checking functions which enable to validate the type of values, and one which return the formatted values in json.
 
-### API Exposer
+#### API Exposer
 
 the main app : app.py
 
@@ -219,9 +218,7 @@ if __name__=='__main__':
             debug=os.getenv('FLASK_APP_DEBUG'))
 
 ```
-For all of this we use ***Flask***, we don't use [``` python3 app.py ```] to run the app.
-we use gunicorn to run it in production mode.
-
+For all of this we use ***Flask***, we don't use [``` python3 app.py ```] to run the app. we use ***gunicorn*** to run it in production mode.
 
 ### Container image
 

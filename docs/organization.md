@@ -1,1 +1,5 @@
 # Team Organization
+
+* TOC
+{:toc}
+
