@@ -48,13 +48,26 @@ See [Fedora IoT](fedora-iot.md) to see how we made the edge device work, and [aa
 
 #### Python Application
 
-See [QIoT Sensor](qiot-sensor.md)
+See [QIoT Sensor](qiot-sensor.md) for details.
+
+Application code is here: [qiot-sensor-py](https://github.com/QIoT-fr-FR-utf8/qiot-sensor-py)
+
+Container images are here: [qiot-sensor](https://quay.io/repository/acb-fr/qiot-sensor)
 
 #### Metrics
 
-See [Device Metrics](prometheus.md)
+See [Device Metrics](prometheus.md) for details.
+
+Container code is here: [qiot-prometheus](https://github.com/QIoT-fr-FR-utf8/qiot-sensor-service-base/tree/master/prom)
+
+Container images are here: [qiot-sensor-prom](https://quay.io/repository/acb-fr/qiot-sensor-prom)
+
 
 ### Edge Service
 
-See [Edge Service](edge-service.md)
+See [Edge Service](edge-service.md) for details.
+
+Application code is here: [qiot-edge-service](https://github.com/QIoT-fr-FR-utf8/qiot-edge-service)
+
+Container images are here: [qiot-egde-service](https://quay.io/repository/acb-fr/qiot-edge-service)
 
