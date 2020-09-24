@@ -1,6 +1,7 @@
 # Using aarch64 VM
 
-Using it to build Quarkus application in native mode, and also automate the docker build image process
+Using it to build Quarkus application in native mode, and also automate the docker build image process.
+
 
 ## Init
 

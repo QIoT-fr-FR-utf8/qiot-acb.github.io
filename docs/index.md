@@ -24,7 +24,7 @@ Hereafter some technical details about our work, choices, issues, solutions and 
 
 ### Operating System
 
-See [Fedora IoT](fedora-iot.md), and [aarch64 Virtual Machine](aarch64.md)
+See [Fedora IoT](fedora-iot.md) to see how we made the edge device work, and [aarch64 Virtual Machine](aarch64-vm.md) for the container build.
 
 ### Sensors Service
 
