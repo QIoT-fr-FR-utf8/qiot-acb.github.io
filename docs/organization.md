@@ -5,6 +5,12 @@
 
 ## Axians Cloud Builder
 
+![axians](img/axians.png)
+
+Axians is the VINCI Energies brand dedicated to ICT.
+
+Axians Cloud Builder, part of Axians, delivers turnkey IT solutions in the areas of storage, servers, networks and virtualisation.
+
 ## Roles
 
 As mentionned on the index page (go NOW if you hadn't read it!!), we are a 5 people team.
@@ -50,4 +56,4 @@ Yes, we have a dedicated t-shirt for this event! See:
 
 []
 
-## 
+## Project Progression
