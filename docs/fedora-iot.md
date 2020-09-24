@@ -9,6 +9,8 @@ One of the main goal of this projet is to use a maximum of Red Hat technologies.
 
 Red Hat offers a Fedora distribution dedicated for IoT : [Fedora IoT](https://iot.fedoraproject.org/).
 
+![Fedora IoT Logo](img/fedora-logo.png)
+
 The main characteristics of that distribution are:
 * Aarch64 distribution for Raspberry Pi
 * Atomic updates, managed by `rpm-ostree`, a hybrid image.package system
@@ -26,4 +28,3 @@ We faced some issues to make the Operating System correctly with the RPi + Envir
 Thanks to the weekly Drop'In Clinic, we managed to make it works.
 
 After that, as the team is mainly ops and sysadmins, using Feodra on their personnal workstations (and not a beautiful Macbook Pro like yours maybe, reading these lines!) no specific difficulties to make podman and other stuff work.
-
