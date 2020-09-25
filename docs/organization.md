@@ -22,6 +22,8 @@ Knowing this, we split the team in 3 subteams:
 * Edge Service guys
 * T-shirt guys
 
+![team](img/team.jpg)
+
 ### IoT Sensors team
 
 * Who:
