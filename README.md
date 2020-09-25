@@ -1,5 +1,7 @@
 # qiot-fr-fr-utf8.github.io
 
+![quarkus](docs/img/quarkus.png)
+
 Documentation for Hackfest QIoT project.
 
 Go to `docs/` folder to edit documentation.
