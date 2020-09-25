@@ -1,6 +1,6 @@
 # Quarkus for IoT Hackfest
 
-![quarkus](img/quarkus.img)
+![quarkus](img/quarkus.png)
 
 * TOC
 {:toc}

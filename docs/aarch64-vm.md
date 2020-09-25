@@ -63,6 +63,10 @@ export PATH
 # ./mvnw package -Pnative
 ```
 
+Wait (a lot...)
+
+![cpu](img/compilation.png)
+
 ### Generate container
 
 ```
