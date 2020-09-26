@@ -70,6 +70,8 @@ There is no issue to implement that. The drawback here is you need to expose you
 
 So, the future idea would be to expose the metrics internaly, and then create a dedicated prometheus server or shipper on the edge device (or anything like sidecar container that would scrape these metrics).
 
+A prometheus server can be run on edge device, see [Dockerfile](https://github.com/QIoT-fr-FR-utf8/qiot-sensor-service-base/tree/master/prom).
+
 ## Annexes
 
 ### Prometheus server Installation
