@@ -38,6 +38,7 @@ You will find some team and personal [feedback](feedback.md) on this event.
 Hereafter some technical details about our work, choices, issues, solutions and other things we faced.
 
 All subpages are divided in paragraphs:
+
 1. Implementation, to give some information on the technical part (goal, environment, how we did things)
 1. Issues and ideas, to show problems we faced, and some ideas for a future work
 1. Annexes, with notes on installation/build/execution of systems and code we provided
@@ -64,7 +65,6 @@ Container code is here: [qiot-prometheus](https://github.com/QIoT-fr-FR-utf8/qio
 
 Container images are here: [qiot-sensor-prom](https://quay.io/repository/acb-fr/qiot-sensor-prom)
 
-
 ### Edge Service
 
 See [Edge Service](edge-service.md) for details.
@@ -72,4 +72,3 @@ See [Edge Service](edge-service.md) for details.
 Application code is here: [qiot-edge-service](https://github.com/QIoT-fr-FR-utf8/qiot-edge-service)
 
 Container images are here: [qiot-egde-service](https://quay.io/repository/acb-fr/qiot-edge-service)
-

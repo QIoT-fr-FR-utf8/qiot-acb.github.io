@@ -20,6 +20,7 @@ $ virt-sysprep -a Fedora-Workstation-32-1.6.aarch64.raw --enable password --root
 ### Create Virtual Machine
 
 Using "Virtual Machine Manager", create a new machine with the following settings:
+
 * Import existing disk image
 * Architecture options
  * Architecture `aarch64`
@@ -32,7 +33,7 @@ Using "Virtual Machine Manager", create a new machine with the following setting
 
 * Update and install dependencies
 
-```
+```shell
 # dnf update
 # dnf -y install gcc glibc-devel zlib-devel libstdc++-static
 # dnf -y install java-11-openjdk
@@ -44,7 +45,7 @@ Using "Virtual Machine Manager", create a new machine with the following setting
 
 * Update PATH, editing `/etc/profile`:
 
-```
+```shell
 [...]
 GRAALVM_HOME=/usr/lib/graalvm/graalvm-ce-java11-20.2.0
 JAVA_HOME=$GRAALVM_HOME
@@ -56,7 +57,7 @@ export PATH
 
 ### Build Application
 
-```
+```shell
 # git clone https://github.com/QIoT-fr-FR-utf8/qiot-edge-service.git
 # cd qiot-edge-service/
 # gu install native-image # Do only once to ged native-image
@@ -69,7 +70,7 @@ Wait (a lot...)
 
 ### Generate container
 
-```
+```shell
 # podman login quay.io
 # podman build -f src/main/docker/Dockerfile.native -t quay.io/acb-fr/qiot-edge-service:1-aarch64 .
 # podman push quay.io/acb-fr/qiot-edge-service:1-aarch64

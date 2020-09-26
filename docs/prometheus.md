@@ -10,6 +10,7 @@ As we (Axians Cloud Builder), are comfortable building and installing observabil
 As prometheus metrics are kind of defacto standard, it would be easy to validate sensors values with such a tool.
 
 On the python application, it's quite easy to implement, as a `prometheus_client` library exists, and you just need to define:
+
 * all metrics you want to expose
 * a `/metrics` route on your flask application
 
@@ -37,6 +38,7 @@ PROM_WEATHER_METRICS['gauge']['humidity'].set(d_jsonexport["humidity"])
 ```
 
 * Metrics exposition
+
 ```python
 @app.route('/metrics')
 def metrics():
@@ -46,7 +48,8 @@ def metrics():
 ```
 
 * Result
-```
+
+```shell
 # HELP bme280_temperature_degrees Temperature of the BME280 sensor
 # TYPE bme280_temperature_degrees gauge
 bme280_temperature_degrees 35.43881389387862
