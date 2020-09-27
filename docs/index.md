@@ -19,7 +19,7 @@ You will find below some documentation about that challenge.
 
 Happy hacking!
 
-## Team
+## The team
 
 We are the "Axians Cloud Builder" France team, with:
 
@@ -30,8 +30,6 @@ We are the "Axians Cloud Builder" France team, with:
 * Rémi Verchère
 
 See [team organization](organization.md) to see how we worked on the project.
-
-You will find some team and personal [feedback](feedback.md) on this event.
 
 ## Technical choices
 
@@ -73,8 +71,10 @@ Application code is here: [qiot-edge-service](https://github.com/QIoT-fr-FR-utf8
 
 Container images are here: [qiot-egde-service](https://quay.io/repository/acb-fr/qiot-edge-service)
 
-### The feedback about this hackfest
-See [Feedback](feedback.md) for details.
+## Hackfest feedback
 
-### The SlideShow
-See [slide](slideshow.html) for details.
+See [feedback](feedback.md) for some team and personal remarks on this event.
+
+## SlideShow
+
+See [slides](slideshow.html) used for the end of project presentation.
