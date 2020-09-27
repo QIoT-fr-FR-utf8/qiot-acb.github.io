@@ -50,3 +50,19 @@ All the remarks are not in a specific order.
 1. The project was done during our free time, mostly (business first!). Then it was difficult work asynchronisly, by night, with all the team
 
 1. We would like to have more collaboration between teams. We are 12 teams, but only few were tchating / help on the dedicated slack channel
+
+## Our Vision, to Infinite and Beyond!
+
+### Feedback and the following
+
+1. (David) I think that the raspberry pi is not the best choice to do some IOT, the raspberry can be a gateway but not the main sensors retriever. For this example we could choose Arduino or other like ESP etc...
+
+1. Our vision about this project it also add some metrics **ON** the edge (ex : via prometheus) in case of network failing, during this interruption we could always check in local
+
+1. We need also more secure flow exchange between the edge device and the poller (now it is in Http)
+
+1. We need also more security on the edge, the **OpenScap** can be one of this solution? or maybe a custom image or ...
+
+1. To end, we build a quickly (in devel - not tested) ansible playbook which can be run either via Ansible Engine or Ansible AWX/Tower
+
+### And Andrea, please, change your microphone ;)
