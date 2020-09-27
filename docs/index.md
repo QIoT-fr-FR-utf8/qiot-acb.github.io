@@ -23,7 +23,7 @@ Happy hacking!
 
 We are the "Axians Cloud Builder" France team, with:
 
-* David Auffray
+* David Auffray - Twitter: [@DavAuff](https://twitter.com/DavAuff) - Github : https://github.com/Davidffry
 * Sébastien Davoult
 * Jérémy Hoarau
 * Chamseddine Saadoune
@@ -75,6 +75,6 @@ Container images are here: [qiot-egde-service](https://quay.io/repository/acb-fr
 
 See [feedback](feedback.md) for some team and personal remarks on this event.
 
-## SlideShow
+<!-- ## SlideShow
 
-See [slides](slideshow.html) used for the end of project presentation.
+See [slides](slideshow.html) used for the end of project presentation. -->
