@@ -72,3 +72,6 @@ See [Edge Service](edge-service.md) for details.
 Application code is here: [qiot-edge-service](https://github.com/QIoT-fr-FR-utf8/qiot-edge-service)
 
 Container images are here: [qiot-egde-service](https://quay.io/repository/acb-fr/qiot-edge-service)
+
+### The feedback about this hackfest
+See [Feedback](feedback.md) for details.
