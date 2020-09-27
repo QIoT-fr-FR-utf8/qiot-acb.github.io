@@ -51,6 +51,12 @@ All the remarks are not in a specific order.
 
 1. We would like to have more collaboration between teams. We are 12 teams, but only few were tchating / help on the dedicated slack channel
 
+## Difficulties
+
+1. We are OPS and not DEV, we had some skills on Pythons, but almost none on JAVA.
+
+1. For some of us, English was a barrier and it was difficult to understand everything during the interactive exchanges like "drop-in clinic". This language barrier did not encourage interactivity between teams.
+
 ## Our Vision, to Infinite and Beyond!
 
 ### Feedback and the following
@@ -60,6 +66,8 @@ All the remarks are not in a specific order.
 1. Our vision about this project it also add some metrics **ON** the edge (ex : via prometheus) in case of network failing, during this interruption we could always check in local
 
 1. We need also more secure flow exchange between the edge device and the poller (now it is in Http)
+
+1. We are wondering about the benefit of using QUARKUS on Edge side, because we don't need to scale up or provision quickly.
 
 1. We need also more security on the edge, the **OpenScap** can be one of this solution? or maybe a custom image or ...
 
