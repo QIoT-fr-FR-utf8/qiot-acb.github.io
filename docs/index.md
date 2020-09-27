@@ -75,3 +75,6 @@ Container images are here: [qiot-egde-service](https://quay.io/repository/acb-fr
 
 ### The feedback about this hackfest
 See [Feedback](feedback.md) for details.
+
+### The SlideShow
+See [slide](slideshow.html) for details.
