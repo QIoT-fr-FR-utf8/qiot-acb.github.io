@@ -220,7 +220,7 @@ To be compliant with the specifications, the container image is built based on t
 
 The container is started with the following parameters:
 
-* `-d` as daemon
+* `-d` as detach
 * `--network=qiot` to be run in a specific dedicated network
 * `-- privileged` to access to external devices such as GPIOs
 * `-p 8000:8000` to expose external port 8000 (see [prometheus](prometheus.md), not used for production)
