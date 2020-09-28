@@ -78,7 +78,7 @@ and, finalky:
 
 **Yeah !** ![](https://media.tenor.com/images/30db77cc0a6d62afe10866197dc85d24/tenor.gif)
 
-### Feedback and the following
+### Feedback and next steps
 
 1. (David) I think that the raspberry pi is not the best choice to do some IoT, the raspberry can be an edge gateway but not the main sensors retriever. For this example we could choose Arduino or other like ESP etc...
 
