@@ -12,7 +12,7 @@
 
 ### Pulling from qiot Sensor Service
 
-Every **5s** the scheduler gather data from Sensor Service by Rest API
+Every **5s** the scheduler gather data from Sensor Service by Rest API.
 
 ``` java
 package fr.axians.qiot.edge_service.service.sensor;
@@ -118,6 +118,9 @@ void init(){
 1. Get the unique machine ID
 1. Register the Device on DataHub
 
+It's necessary to use the /etc/machine-id of Host machine and not ephemeral container. To do this, we share the host file with containers at the creation:
+
+> podman **-v /etc/machine-id:/etc/machine-id:ro**  *[...]*
 
 ### (Un)Register
 
@@ -143,6 +146,8 @@ public interface RegistrationService {
 
 }
 ```
+
+name, longitude and latitude are set in application.properties and can be set by ENV variables from CRI. 
 
 ## Running the application in reel environment
 

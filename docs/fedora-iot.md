@@ -38,6 +38,11 @@ We also tried to use some CI to automatically build the images, using github act
 * github does not provide (yet) aarch64 architecture on their runners
 * we tried to setup local runners on [aarch64-vm](aarch64-vm.md), but the setup could not complete.
 
+### Security
+
+1. We should not disable SELinux
+1. We should not disable firewalld
+
 ### Others
 
 After that, as the team is mainly ops and sysadmins, using Feodra on their personnal workstations (and not a beautiful Macbook Pro like yours maybe, reading these lines!) no specific difficulties to make podman and other stuff work.

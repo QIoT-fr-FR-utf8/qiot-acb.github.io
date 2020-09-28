@@ -57,7 +57,7 @@ Knowing this, we split the team in 3 subteams:
 
 Yes, we have a dedicated t-shirt for this event! See:
 
-[]
+[https://sprd.co/GesK0qg](https://sprd.co/GesK0qg)
 
 ## Project Progress
 
