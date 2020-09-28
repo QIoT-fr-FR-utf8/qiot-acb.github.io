@@ -40,4 +40,4 @@ We also tried to use some CI to automatically build the images, using github act
 
 ### Others
 
-After that, as the team is mainly ops and sysadmins, using Feodra on their personnal workstations (and not a beautiful Macbook Pro like yours maybe, reading these lines!) no specific difficulties to make podman and other stuff work.
+After that, as the team is mainly ops and sysadmins, using Fedora on their personnal workstations (and not a beautiful Macbook Pro like yours maybe, reading these lines!) no specific difficulties to make podman and other stuff work.
