@@ -55,9 +55,7 @@ Knowing this, we split the team in 3 subteams:
 
 ### T-shirt team
 
-Yes, we have a dedicated t-shirt for this event! See:
-
-[]
+Yes, we have a dedicated t-shirt for this event!
 
 ## Project Progress
 
