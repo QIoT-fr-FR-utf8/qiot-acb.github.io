@@ -152,7 +152,7 @@ public interface RegistrationService {
 
 Name, longitude and latitude are set in application.properties and can be set by ENV variables from CRI. 
 
-## Running the application in reel environment
+## Running the application in production mode
 
 From Fedora IOT on Raspberry PI, execute the following commands
 
