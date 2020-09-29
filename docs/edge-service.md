@@ -181,6 +181,60 @@ podman run \
 quay.io/acb-fr/qiot-edge-service-jvm:1.1
 ```
 
+## Difficulties
+
+### int into Double
+
+We have two IOT runtime environments. Two Raspberries, two probes, two geographic sites. One is used for production, the other for development. We built a fully functional Edge Service image on the Pre-Production environment but with this same image we encountered problems in the Production environment. We had the following error.
+
+``` log
+2020-09-28 08:40:14,597 ERROR [io.sma.rea.mes.provider] (main) SRMSG00200: The method fr.axians.qiot.edge_service.service.telemetry.TelemetryService#streamGasData has thrown an exception: java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.Double (java.lang.Integer and java.lang.Double are in module java.base of loader 'bootstrap')
+```
+
+We had wasted time trying to figure out why we had an error in the code when the code version was exactly the same.
+
+After investigation, the problem came from the QIoT Sensor Service which returned an INT for the ADC value when it could not find a value to harvest. While the QIoT Edge Service was waiting for a Double.
+
+``` json
+// adc in Double
+{
+  "result":{
+    "adc":0.0,
+    "instant":"2020-09-28 09:04:29GMT",
+    "nh3":363047.61904761917,
+    "oxidising":22772.37851662404,
+    "reducing":26907.133243606997
+  }
+}
+```
+
+``` json
+// adc in INT
+{
+  "result":{
+    "adc":0,
+    "instant":"2020-09-28 09:05:29GMT",
+    "nh3":363047.61904761917,
+    "oxidising":22772.37851662404,
+    "reducing":26907.133243606997
+  }
+}
+```
+
+In particular, we lost time on this problem because we worked in a decentralized manner and the Edge Service sub-team had not seen the operation of the Sensor Service part.
+
+### -PNative
+
+``` log
+__  ____  __  _____   ___  __ ____  ______
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/
+[...]
+2020-09-28 08:41:49,847 WARN  [org.jbo.res.res.i18n] (main) RESTEASY002165: No valueOf() method available for int, trying constructor...
+2020-09-28 08:41:49,850 ERROR [io.sma.rea.mes.provider] (main) SRMSG00200: The method fr.axians.qiot.edge_service.service.telemetry.TelemetryService#streamGasData has thrown an exception: javax.ws.rs.ProcessingException: java.lang.IllegalArgumentException: RESTEASY003360: int has no String constructor
+```
+
 ## Contributors
 
 <a href="https://github.com/QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io/graphs/contributors">
