@@ -12,7 +12,8 @@
 
 ### Pulling from qiot Sensor Service
 
-Every **5s** the scheduler gather data from Sensor Service by Rest API.
+We have implemented this interface to gather data from our python 
+Rest API services. This interface will be call every 5s to send data to DataHub.
 
 ``` java
 package fr.axians.qiot.edge_service.service.sensor;
@@ -39,7 +40,7 @@ public interface SensorService {
 ```
 ### Scheduling
 
-The scheduling is done by **TelemetryService**. We get data from Sensor Service and put it on DataHub.
+The scheduling is done by **TelemetryService**. We get data from Sensor Service and put it on DataHub. We choose to use the Flowable object to create our stream between our qiot edge services and the DataHub. This object associated with our MQTT parameter set in our resource files allow us to send a String that contains our air quality information.
 
 ``` java
 public class TelemetryService {
@@ -75,7 +76,7 @@ public class TelemetryService {
 
 ### Shutdown
 
-When we gracefully shutdown the QIoT Edge Service, the unregister is launched.
+When we gracefully shutdown the QIoT Edge Service, we are calling a function (more information bellow) that sends a request to unsubscribe.
 
 ``` java
 void onStop(@Observes ShutdownEvent ev) {
@@ -85,6 +86,8 @@ void onStop(@Observes ShutdownEvent ev) {
 ```
 
 ### init overload
+
+Here we have our initialization class that instantiated dynamically configuration parameters we need.
 
 ``` java
 void init(){
@@ -124,7 +127,7 @@ It's necessary to use the /etc/machine-id of Host machine and not ephemeral cont
 
 ### (Un)Register
 
-We created a *Interface* to Register and UnRegister Device on DataHub:
+We have created an *Interface* to Register and UnRegister Device on DataHub:
 
 ``` java
 public interface RegistrationService {
@@ -147,7 +150,7 @@ public interface RegistrationService {
 }
 ```
 
-name, longitude and latitude are set in application.properties and can be set by ENV variables from CRI. 
+Name, longitude and latitude are set in application.properties and can be set by ENV variables from CRI. 
 
 ## Running the application in reel environment
 
