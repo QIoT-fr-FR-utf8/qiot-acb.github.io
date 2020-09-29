@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-## How it work's
+## How it works
 
 
 ### Class Diagram
@@ -228,8 +228,8 @@ In particular, we lost time on this problem because we worked in a decentralized
 
 ### -PNative
 
-When we package our application and launch our executable application we encounter the error below. This problem seems to be associated with the RestEasy library that allow our code to read and iinterprete Json into java object. When we work in our developpement environement we did not have any problem but due to unknown reason we had it in a Pnative mode. We have try to modify different type of our variable and modify our code to properly transform the variable we get from our RestClient Interface. But until we still did not have a solution. 
-Of course our teams have an idea of the probleme and at matter of fact that is our python teams that have build the image for us we thinks that those beared men have tried to sabotage us .. ;p 
+When we packaged our application and launched our executable application we encountered the error below. This problem seems to be associated with the RestEasy library that allow our code to read and interprete Json into java object. When we worked in our development environment we did not have any problem but due to unknown reason we had it in a Pnative mode. We have try to modify different type of our variable and modify our code to properly transform the variable we get from our RestClient Interface. But until we still did not have a solution. 
+Of course our team has an idea of the problem and at matter of fact that is our python team that have build the image for us we think that those beared men have tried to sabotage us .. ;p 
 
 ``` log
 __  ____  __  _____   ___  __ ____  ______
