@@ -97,3 +97,9 @@ and, finalky:
 ### Last words
 
 **Andrea, please, change your microphone ;)**
+
+## Contributors
+
+<a href="https://github.com/QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io" />
+</a>

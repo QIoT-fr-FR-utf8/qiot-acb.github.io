@@ -97,3 +97,9 @@ For this demo, a prometheus server run on edge device, see [Dockerfile](https://
 
 * [prometheus: bien démarrer avec python](https://xincto.me/2018/05/prometheus-bien-demarrer-en-python.html)
 * [linoxide prometheus howto](https://linoxide.com/linux-how-to/install-prometheus-ubuntu/)
+
+## Contributors
+
+<a href="https://github.com/QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io" />
+</a>

@@ -46,3 +46,9 @@ We also tried to use some CI to automatically build the images, using github act
 ### Others
 
 After that, as the team is mainly ops and sysadmins, using Fedora on their personnal workstations (and not a beautiful Macbook Pro like yours maybe, reading these lines!) no specific difficulties to make podman and other stuff work.
+
+## Contributors
+
+<a href="https://github.com/QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io" />
+</a>

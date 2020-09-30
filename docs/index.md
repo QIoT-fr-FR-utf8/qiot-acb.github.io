@@ -82,3 +82,9 @@ See [feedback](feedback.md) for some team and personal remarks on this event.
 <!-- ## SlideShow
 
 See [slides](slideshow.html) used for the end of project presentation. -->
+
+## Contributors
+
+<a href="https://github.com/QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=QIoT-fr-FR-utf8/qiot-fr-fr-utf8.github.io" />
+</a>
